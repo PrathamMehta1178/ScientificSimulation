@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Collision Simulation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+</head>
+<body id="collisionPage">
+    <div>
+        <div class="buttons" style="float: right;">
+            <form action="index.html" style="float: right;">
+                <button type="submit" class="button">Home Page</button>
+            </form>
+        </div>
+        <h1>Collision Simulation</h1>
+        <p>
+            Collision demonstrates key physics principles:
+            <ul>
+                <li>Conservation of Momentum: Total momentum is conserved in all collisions.</li>
+                <li>Types of collisions
+                    <ul>
+                        <li>Elastic Collisions: Both momentum and kinetic energy are conserved.</li>
+                        <li>Inelastic Collisions: Momentum is conserved, but kinetic energy is not.</li>
+                    </ul>
+                </li>
+                <li>Impulse and Force: Impulse (force over time) changes an object's momentum.</li>
+                <li>Newton's Third Law: Forces during collisions are equal and opposite.</li>
+                <li>Energy Transformation: Kinetic energy can convert to heat, sound, or deformation.</li>
+                <li>Center of Mass Motion: The center of mass's motion stays constant if no external forces act.</li>
+            </ul>
+            These principles illustrate momentum and energy conservation, force interactions, and Newtonian mechanics.
+        </p>
+    </div>
+
+    <div class="controls">
+        <label for="speedRange">Speed: <span id="speedValue">1</span></label>
+        <input type="range" id="speedRange" min="0.1" max="5" step="0.1" value="1" oninput="updateSpeed(this.value)">
+
+        <label for="ballCount">Number of Balls: <span id="ballCountValue">10</span></label>
+        <input type="range" id="ballCount" min="1" max="50" value="10" oninput="updateBallCount(this.value)">
+    </div>
+
+    <div id="simulation"></div>
+
+    <script src="scripts/collision.js"></script>
+</body>
+</html>

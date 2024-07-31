@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectiles Simulation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body id="projectilesPage">
+    <div>
+        <div class="buttons" style="float: right;">
+            <form action="index.html" style="float: right;">
+                <button type="submit" class="button">Home Page</button>
+            </form>
+        </div>
+        <h1 style="font-style: italic; font-family: 'Gill Sans';">Projectiles</h1>
+        <p>
+            Projectiles showcase key principles of physics:
+            <ul>
+                <li>Newton's Laws of Motion: Projectiles follow Newton's laws, including continuous motion unless acted on by gravity.</li>
+                <li>Parabolic Trajectory: Projectiles follow a curved, parabolic path due to gravity.</li>
+                <li>Independence of Motion: Horizontal and vertical motions are independent; horizontal motion is constant, while vertical motion is uniformly accelerated by gravity.</li>
+                <li>Equations of Motion: Projectile motion is described by kinematic equations for horizontal and vertical distances.</li>
+                <li>Energy Conservation: Total mechanical energy (kinetic and potential) is conserved in the absence of air resistance.</li>
+            </ul>
+            These principles illustrate motion, forces, trajectories, and energy conservation.
+        </p>
+    </div>
+
+    <div class="controls">
+        <label for="angle">Launch Angle (degrees): </label>
+        <input type="number" id="angle" value="45">
+        <label for="velocity">Initial Velocity (m/s): </label>
+        <input type="number" id="velocity" value="50">
+        <button onclick="startSimulation()">Start Simulation</button>
+    </div>
+
+    <div id="simulationContainer"></div>
+
+    <script src="scripts/projectiles.js"></script>
+</body>
+</html>

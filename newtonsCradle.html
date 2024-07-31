@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <title>Newton's Cradle</title>
+</head>
+<body id="newtonsCradle">
+    <div>
+        <div class="buttons" style="float: right;">
+            <form action="index.html" style="float: right;">
+                <button type="submit" class="button">Home Page</button>
+            </form>
+        </div>
+        <h1 style="font-style: italic; font-family: 'Gill Sans';">Newton’s Cradle</h1>
+        <p>
+            Newton's Cradle demonstrates key physics principles:
+            <ul>
+                <li>Conservation of Momentum: Momentum is transferred through the balls, keeping the total momentum constant.</li>
+                <li>Conservation of Energy: Energy is conserved as it transfers from potential to kinetic energy and back.</li>
+                <li>Elastic Collisions: The balls undergo nearly elastic collisions, conserving kinetic energy and momentum.</li>
+                <li>Transfer of Forces: Forces are transferred through the balls, showing Newton's third law of motion.</li>
+            </ul>
+            Overall, it illustrates how momentum and energy are conserved and transferred in a system.
+        </p>
+    </div>
+
+    <div id="simulationContainer"></div>
+
+    <div class="controls">
+        <label for="lengthSlider">Length:</label>
+        <input type="range" id="lengthSlider" min="50" max="400" value="200" oninput="updateStringLength(this.value)">
+    </div>
+
+    <script src="scripts/newtonsCradle.js"></script>
+</body>
+</html>
